@@ -1,0 +1,29 @@
+<?xml version="1.0" ?> 
+<project name="mammoth.js" default="build">
+
+	<target name="init" depends="clean">
+	</target>
+	
+	<target name="build">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="run mammothcore"/>
+		</exec>
+	</target>
+	
+	<target name="minify mammoth">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="run minify_mammoth"/>
+		</exec>
+	</target>
+	
+	<target name="minify mammothcore">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="run minify_mammothcore"/>
+		</exec>
+	</target>
+	
+	<target name="clean">
+		<delete dir="build" />
+	</target>
+ 	
+</project>
