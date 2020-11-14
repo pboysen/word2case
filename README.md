@@ -5,3 +5,5 @@ An extension of the Mammoth project that adds the following enhancements:
 * Recognizes widget images as widgets and replaces image with widget.
 * Supports embedded equations.
 * Enhanced table support: width of columns and rows; colspan, rowspan; formatting within cells.
+* Converts bulleted lists to multiple choice or checklists with one click
+
