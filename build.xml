@@ -1,15 +1,44 @@
 <?xml version="1.0" ?> 
-<project name="mammoth.js" default="build">
+<project name="word2case" default="build">
 
 	<target name="init" depends="clean">
 	</target>
-	
-	<target name="build">
+		
+	<target name="clean">
+		<delete dir="build" />
+	</target>
+ 	
+	<target name="copy build-package">
+		<copy todir="c:/Users/pboysen/node">
+		    <fileset dir="C:/Users/pboysen/git/word2case/builder">
+		        <include name="package.json"/>		    	
+		    </fileset>
+		</copy>
+		<copy todir="c:/Users/pboysen/node/public">
+		    <fileset dir="C:/Users/pboysen/git/word2case/builder">
+		        <include name="word2case.html"/>		    	
+		    </fileset>
+		</copy>
+	</target>
+ 	
+	<target name="build word2case" depends="copy build-package">
 		<exec executable="C:\Program Files\nodejs\npm.cmd">
-			<arg line="run mammothcore"/>
+			<arg line="run build_word2case"/>
 		</exec>
 	</target>
 	
+	<target name="minify word2case">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="run minify_word2case"/>
+		</exec>
+	</target>
+
+	<target name="build">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="run build_mammothcore"/>
+		</exec>
+	</target>
+		
 	<target name="minify mammoth">
 		<exec executable="C:\Program Files\nodejs\npm.cmd">
 			<arg line="run minify_mammoth"/>
@@ -21,9 +50,4 @@
 			<arg line="run minify_mammothcore"/>
 		</exec>
 	</target>
-	
-	<target name="clean">
-		<delete dir="build" />
-	</target>
- 	
 </project>

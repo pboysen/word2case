@@ -42,8 +42,7 @@
     "hamjest": "^3.7.1",
     "mocha": "^8.1.1",
     "temp": "~0.7.0",
-    "terser": "5.3.2",
-    "uglify-js": "^3.10.2"
+    "terser": "5.3.2"
   },
   "browser": {
     "./lib/unzip.js": "./browser/unzip.js",
@@ -54,9 +53,9 @@
   },
   "scripts": {
     "drawsim": "watchify C:/Users/pboysen/git/wxapps/src/drawsim/main.js  -o public/main-built.js -t [babelify --presets [@babel/preset-env] ] -d -v",
-    "wordtocase": "browserify C:/Users/pboysen/git/allele-docx/src/wordtocase/mammoth.js -o public/mammoth-built.js -t [babelify --presets [@babel/preset-env] ] -d -v",
-    "mammothcore": "browserify C:/Users/pboysen/git/mammoth.js/lib/index.js  -o public/mammothcore-built.js -t [babelify --presets [@babel/preset-env] ] -d -v",
-    "minify_mammoth": "terser public/mammoth-built.js > public/mammoth-built-min.js",
+    "build_word2case": "browserify C:/Users/pboysen/git/word2case/builder/word2case.js -o public/word2case-built.js -t [babelify --presets [@babel/preset-env] ] -d -v",
+    "minify_word2case": "terser public/word2case-built.js > public/word2case-built-min.js",
+    "build_mammothcore": "browserify C:/Users/pboysen/git/mammoth.js/lib/index.js  -o public/mammothcore-built.js -t [babelify --presets [@babel/preset-env] ] -d -v",
     "minify_mammothcore": "terser public/mammothcore-built.js > public/mammothcore-built-min.js"
   }
 }
