@@ -38,7 +38,7 @@
     "comma-style": ["error", "last"],
     "computed-property-spacing": ["error", "never"],
     "eol-last": ["error"],
-    "indent": ["error", 4],
+    "indent": ["error", 2],
     "key-spacing": [
       "error",
       {"beforeColon": false, "afterColon": true, "mode": "strict"}
@@ -71,5 +71,9 @@
     "module": true,
     "require": false,
     "Uint8Array": false
+  },
+
+  "parserOptions": {
+    "sourceType": "module"
   }
 }
