@@ -50,6 +50,6 @@
   },
   "scripts": {
     "w2c": "browserify ../lib/index.js -o ../../casewhiz/client/public/w2c.js -t [babelify --presets [@babel/preset-env] ] -d -v",
-    "postw2c1": "terser w2c.js -c > ../../casewhiz/client/public/w2c-min.js"
+    "postw2c": "terser w2c.js -c > ../../casewhiz/client/public/w2c-min.js"
   }
 }
