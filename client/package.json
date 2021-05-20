@@ -51,6 +51,6 @@
   },
   "scripts": {
     "w2c": "browserify ../lib/index.js -o w2c.js -t [babelify --presets [@babel/preset-env] ] -d -v",
-    "postw2c": "terser w2c.js -c > ../../genetherapy/client/public/w2c-min.js"
+    "postw2c": "terser w2c.js -c > ../../genetherapy/client/public/w2c-min.js; rm -f w2c.js"
   }
 }
