@@ -1,16 +1,20 @@
+export {
+  isEmptyRun,
+  isRun,
+  isText,
+  isHyperlink,
+  isTable,
+  isRow
+};
+
+function isEmptyRun() {
+  return isRun({children: []});
+}
+
 var hamjest = require("hamjest");
 var _ = require("underscore");
 
 var documents = require("../../lib/documents");
-
-
-exports.isEmptyRun = isRun({children: []});
-exports.isRun = isRun;
-exports.isText = isText;
-exports.isHyperlink = isHyperlink;
-exports.isTable = isTable;
-exports.isRow = isRow;
-
 
 function isRun(properties) {
     return isDocumentElement(documents.types.run, properties);

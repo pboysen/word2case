@@ -1,7 +1,8 @@
+export {
+  openZip
+};
 var promises = require("../lib/promises");
 var zipfile = require("../lib/zipfile");
-
-exports.openZip = openZip;
 
 function openZip(options) {
     if (options.arrayBuffer) {
